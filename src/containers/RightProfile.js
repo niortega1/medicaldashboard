@@ -38,7 +38,7 @@ const RightProfile = () => {
                 </div>
             </div>
 
-            <div class="reminders">
+            {/* <div class="reminders">
                 <div class="header">
                     <h2>Reminders</h2>
                     <span class="material-icons-sharp">
@@ -93,7 +93,7 @@ const RightProfile = () => {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
             <UsersPage />
         </div>
     );

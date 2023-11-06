@@ -1,7 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+    const location = useLocation();
+    const [activeTab, setActiveTab] = useState(location.pathname);
+
+    const handleClick = (name) => {
+        setActiveTab(name);
+    }
+
     return (
         <div>
             <aside>
@@ -16,32 +23,32 @@ const Sidebar = () => {
                 </div>
             </div>
             <div class="sidebar">
-                <Link to="/">
+            <Link to="/" onClick={() => handleClick('/')} className={activeTab === '/' ? 'active' : ''}>
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Dashboard</h3>
                 </Link>
-                <Link to="/users">
+                <Link to="/users" onClick={() => handleClick('/users')} className={activeTab === '/users' ? 'active' : ''}>
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
                     <h3>Users</h3>
                 </Link>
-                <Link to="/patients">
+                <Link to="/patients" onClick={() => handleClick('/patients')} className={activeTab === '/patients' ? 'active' : ''}>
                     <span class="material-icons-sharp">
                         people_outline
                     </span>
                     <h3>Patients</h3>
                     <span class="message-count">7</span>
                 </Link>
-                <Link to="/appointments" class="active">
+                <Link to="/appointments" onClick={() => handleClick('/appointments')} className={activeTab === '/appointments' ? 'active' : ''}>
                     <span class="material-icons-sharp">
                         calendar_today
                     </span>
                     <h3>Appointments</h3>
                 </Link>
-                <Link to="/billing">
+                <Link to="/billing" onClick={() => handleClick('/billing')} className={activeTab === '/billing' ? 'active' : ''}>
                     <span class="material-icons-sharp">
                         payment
                     </span>

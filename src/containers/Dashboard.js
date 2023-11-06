@@ -9,7 +9,7 @@ const Dashboard = () => {
         <div>
             <main>
                 <Analytics />                   
-                <NewUsers />
+                {/* <NewUsers /> */}
                 <PatientsPage />
                 <BillingPage />
             </main>
