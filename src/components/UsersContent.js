@@ -1,5 +1,5 @@
-// UsersPage.js
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addUsers, removeUsers } from "../slices/usersSlice";
 import AddUserForm from '../components/AddUserForm'; // Import the form component
@@ -24,20 +24,23 @@ const UsersContent = () => {
 
     return (
         <div className="new-users">
-            <h2>New Users</h2>
-            <div className="user-list">
-                {users.map(user => (
-                    <div className="user" key={user.id}>
-                        <h2>{user.name}</h2>
-                        <p>{user.isOnline ? 'Online' : `Last online: ${user.lastOnline}`}</p>
-                        {/* Add a button to remove this user */}
-                        <button onClick={() => handleRemoveUser(user.id)}>Remove User</button>
-                    </div>
-                ))}
-                {!showAddUserForm && (
-                    <button onClick={handleAddUserClick}>Add User</button>
-                )}
-            </div>
+            <Link to="/users">
+                <div className="user-list">
+                    {users.map(user => (
+                        <div className="user" key={user.id}>
+                            <div className="user-details">
+                                <h2>{user.name}</h2>
+                                <p>{user.isOnline ? 'Online' : `Last online: ${user.lastOnline}`}</p>
+                            </div>
+                            {/* Add a button to remove this user */}
+                            <button onClick={() => handleRemoveUser(user.id)}>Remove User</button>
+                        </div>
+                    ))}
+                    {!showAddUserForm && (
+                        <button className="add-user" onClick={handleAddUserClick}>Add User</button>
+                    )}
+                </div>
+            </Link>
             {showAddUserForm && <AddUserForm onFormSubmit={handleFormSubmit} />}
         </div>
     );

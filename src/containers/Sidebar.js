@@ -7,8 +7,7 @@ const Sidebar = () => {
             <aside>
             <div class="toggle">
                 <div class="logo">
-                    <img src="images/logo.png" />
-                    <h2>Asmr<span class="danger">Prog</span></h2>
+                    <h2>Medical Dashboard</h2>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
@@ -16,7 +15,6 @@ const Sidebar = () => {
                     </span>
                 </div>
             </div>
-
             <div class="sidebar">
                 <Link to="/">
                     <span class="material-icons-sharp">
@@ -35,7 +33,7 @@ const Sidebar = () => {
                         people_outline
                     </span>
                     <h3>Patients</h3>
-                    <span class="message-count">12</span>
+                    <span class="message-count">7</span>
                 </Link>
                 <Link to="/appointments" class="active">
                     <span class="material-icons-sharp">
@@ -43,13 +41,13 @@ const Sidebar = () => {
                     </span>
                     <h3>Appointments</h3>
                 </Link>
-                <Link to="/">
+                <Link to="/billing">
                     <span class="material-icons-sharp">
                         payment
                     </span>
                     <h3>Billing</h3>
                 </Link>
-                <Link to="/">
+                <Link to="/settings">
                     <span class="material-icons-sharp">
                         settings
                     </span>

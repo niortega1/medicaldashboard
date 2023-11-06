@@ -12,17 +12,72 @@ code {
     monospace;
 }
 
-
 /* DisplayComponent.css */
 .display-component {
-  /* Your styles for the component */
-  border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 8px;
-  background-color: #fff;
-  /* More styles */
 }
 
 .display-component .content {
-  /* Styles for the content area */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.patients-table, .billing-table {
+  background-color: var(--color-white);
+  width: 100%;
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--card-border-radius);
+  transition: all 0.3s ease;
+}
+
+.patients-table-header th,
+.billing-table th {
+  text-align: center;
+  padding: 10px;
+}
+
+.patient-row td {
+  padding: 10px;
+}
+
+.remove-patient-button {
+  color: rgb(180, 35, 24);
+  background-color: rgba(240, 68, 56, 0.12);
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 4px 8px;
+}
+
+.payment-status {
+  padding: 4px 8px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  min-width: 100%; /* Adjust width as needed */
+}
+
+.payment-status.paid {
+  background-color: rgba(16, 185, 129, 0.12);
+  border-radius: 12px;
+  font-weight: 600;
+  color: rgb(11, 129, 90);
+}
+
+.payment-status.payment-pending {
+  background-color: rgba(247, 144, 9, 0.12);
+  border-radius: 12px;
+  font-weight: 600;
+  color: rgb(181, 71, 8);
+}
+
+.payment-status.not-paid {
+  color: rgb(180, 35, 24);
+  background-color: rgba(240, 68, 56, 0.12);
+  font-weight: 600;
+  border-radius: 12px;
 }

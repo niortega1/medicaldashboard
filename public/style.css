@@ -121,6 +121,32 @@ b{
     grid-template-columns: 12rem auto 23rem;
 }
 
+/* Side Nav Bar */
+.sidebar {
+    background-color: var(--color-white);
+    /* other styles */
+  }
+
+  .nav-div {
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-list {
+}
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+  }
+  
 aside{
     height: 100vh;
 }
@@ -228,6 +254,7 @@ main .analyse{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
+    margin: 40px
 }
 
 main .analyse > div{
@@ -281,7 +308,7 @@ main .analyse .sales svg circle{
 }
 
 main .analyse .visits svg circle{
-    stroke: var(--color-danger);
+    stroke: rgba(205, 51, 40, 0.815);
     stroke-dashoffset: -30;
     stroke-dasharray: 200;
 }
@@ -303,8 +330,45 @@ main .analyse .progresss .percentage{
     width: 100%;
 }
 
-main .new-users{
-    margin-top: 1.3rem;
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem;
+}
+
+
+.user button {
+    color: rgb(180, 35, 24);
+    background-color: rgba(240, 68, 56, 0.12);
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.add-user {
+    color: rgb(24, 45, 180);
+    background-color: rgba(56, 87, 240, 0.183);
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.right-section .new-users .user-list{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 main .new-users .user-list{
@@ -321,16 +385,29 @@ main .new-users .user-list{
     transition: all 0.3s ease;
 }
 
+
 main .new-users .user-list:hover{
     box-shadow: none;
 }
 
-main .new-users .user-list .user{
+main .new-users .user-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.4rem;
+}
+
+right-section .new-users .user-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.4rem;
 }
+
 
 main .new-users .user-list .user img{
     width: 5rem;
@@ -338,6 +415,35 @@ main .new-users .user-list .user img{
     margin-bottom: 0.4rem;
     border-radius: 50%;
 }
+
+.stripe-payment-button {
+    background-color: #635bff; /* Stripe's brand color */
+    color: white;
+    font-size: 16px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none; /* If you use an <a> element */
+    display: inline-block;
+    margin: 4px 2px;
+  }
+  
+  .stripe-payment-button:hover {
+    background-color: #5349d1; /* Darker shade for hover state */
+  }
+  
+  .stripe-payment-button:active {
+    background-color: #4138b5; /* Even darker shade for active state */
+  }
+  
+  .stripe-payment-button:disabled {
+    background-color: #a0a0a0; /* Grayed out for disabled state */
+    cursor: not-allowed;
+  }
+  
 
 main .recent-orders{
     margin-top: 1.3rem;
