@@ -52,6 +52,19 @@ code {
   padding: 4px 8px;
 }
 
+.remove-patient-button:hover {
+  background-color: rgba(240, 68, 56, 0.24);
+}
+
+.remove-patient-button:active {
+  background-color: rgba(240, 68, 56, 0.48);
+}
+
+.remove-patient-button:disabled {
+  color: rgba(240, 68, 56, 0.24);
+  background-color: rgba(240, 68, 56, 0.12);
+}
+
 .payment-status {
   padding: 4px 8px;
   color: white;

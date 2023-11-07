@@ -358,6 +358,19 @@ main .analyse .progresss .percentage{
     cursor: pointer;
 }
 
+.user button:hover {
+    background-color: rgba(240, 68, 56, 0.24);
+}
+
+.user button:active {
+    background-color: rgba(240, 68, 56, 0.48);
+}
+
+.user button:disabled {
+    color: rgba(240, 68, 56, 0.24);
+    background-color: rgba(240, 68, 56, 0.12);
+}
+
 .add-user {
     color: rgb(24, 45, 180);
     background-color: rgba(56, 87, 240, 0.183);
@@ -686,17 +699,20 @@ main .recent-orders a{
 .add-patient-form input[type="number"],
 .add-patient-form input[type="email"],
 .add-patient-form input[type="tel"],
-.add-patient-form input[type="date"] {
+.add-patient-form input[type="date"],
+.add-user-form input[type="text"] {
     background-color: var(--color-background);
 }
 
-.add-patient-form input:focus {
+.add-patient-form input:focus,
+.add-user-form input:focus {
     border-color: var(--color-primary);
     outline: none;
     box-shadow: 0 0 0 2px var(--color-light);
 }
 
-.add-patient-form button {
+.add-patient-form button,
+.add-user-form button {
     padding: 0.6rem 1.2rem;
     border-radius: var(--border-radius-2);
     background-color: var(--color-primary);
@@ -711,20 +727,12 @@ main .recent-orders a{
     background-color: var(--color-dark-variant);
 }
 
-.add-patient-form button:disabled {
+.add-patient-form button:disabled,
+.add-user-form button:disabled {
     background-color: var(--color-dark-variant);
     cursor: not-allowed;
 }
 
-.add-user-form button {
-    padding: 0.6rem 1.2rem;
-    border-radius: var(--border-radius-2);
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
 @media screen and (max-width: 1200px) {
     .container{
