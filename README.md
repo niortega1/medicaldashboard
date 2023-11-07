@@ -1,26 +1,26 @@
-### Medical Dashboard
+# Medical Dashboard
 ## Description
 This Medical Dashboard is a bespoke interface developed to emulate the daily operations of medical professionals and administrators. It offers a fully functional dashboard to visualize and manage patient information, scheduling, billing, and much more.
 
 ## Installation Prerequisites
-Node.js
-npm (usually comes with Node.js)
-Setup
-Clone the repository and navigate to the project directory:
-git clone https://github.com/your-username/medical-dashboard.git
-cd medicaldashboard\Dashboard-Designs\medicaldashboard
+- Node.js
+- npm (usually comes with Node.js)
+## Setup
+- Clone the repository and navigate to the project directory:
+- git clone https://github.com/your-username/medical-dashboard.git
+- cd medicaldashboard\Dashboard-Designs\medicaldashboard
 
 ## Start the backend server:
-cd backend\server
-node server.js
+- cd backend\server
+- node server.js
 
 ## Open another terminal and start the development server:
-cd medicaldashboard\Dashboard-Designs\medicaldashboard
-npm install
-npm run start
-The application should now be running in your default web browser.
+- cd medicaldashboard\Dashboard-Designs\medicaldashboard
+- mnpm install
+- npm run start
+- The application should now be running in your default web browser.
 
-## Usage
+## Usage 
 The dashboard allows for comprehensive management of patient and billing information, with user-friendly interfaces and functionalities, such as:
 
 Adding new patient records
