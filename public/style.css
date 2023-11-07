@@ -372,14 +372,32 @@ main .analyse .progresss .percentage{
 }
 
 .add-user {
-    color: rgb(24, 45, 180);
-    background-color: rgba(56, 87, 240, 0.183);
+    color: var(--color-background); /* Dark text on light background */
+    background-color: var(--color-primary); /* Lighter background */
     font-weight: 600;
-    border-radius: 12px;
-    padding: 4px 8px;
+    border-radius: var(--border-radius-2);
+    padding: var(--padding-1);
     cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border: none; /* Assuming we don't want a border, but if you do, set it accordingly */
+    box-shadow: var(--box-shadow);
 }
 
+.add-user:hover {
+    background-color: var(--color-dark); /* Change to a primary color on hover */
+    color: var(--color-white); /* Ensure text color contrasts well against the hover background */
+}
+
+.add-user:active {
+    background-color: var(--color-dark-variant); /* Darker variant when active */
+}
+
+/* Disabled state styling */
+.add-user:disabled {
+    color: var(--color-info-dark);
+    background-color: var(--color-dark-variant);
+    cursor: not-allowed;
+}
 .right-section .new-users .user-list{
     background-color: var(--color-white);
     padding: var(--card-padding);

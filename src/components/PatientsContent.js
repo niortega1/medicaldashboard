@@ -63,7 +63,7 @@ const PatientsContent = () => {
                 </div>      
                 </Link>
                 {!showAddPatientForm ? (
-                    <button onClick={handleAddPatientClick}>Add Patient</button>
+                    <button className='add-user' onClick={handleAddPatientClick}>Add Patient</button>
                 ) : (
                     <AddPatientForm onFormSubmit={handleFormSubmit} />
                 )}
