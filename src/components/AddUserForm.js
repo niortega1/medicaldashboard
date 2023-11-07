@@ -24,17 +24,19 @@ const AddUserForm = ({ onFormSubmit }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input type="text" value={name} onChange={handleNameChange} required />
-            </label>
-            <label>
-                Profile Image:
-                <input type="file" onChange={handleImageChange} />
-            </label>
-            <button type="submit">Add User</button>
-        </form>
+        <div className='add-user-form'>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Name:
+                    <input type="text" value={name} onChange={handleNameChange} required />
+                </label>
+                <label>
+                    Profile Image:
+                    <input type="file" onChange={handleImageChange} />
+                </label>
+                <button type="submit">Add User</button>
+            </form>
+        </div>
     );
 };
 

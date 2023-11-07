@@ -1,44 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import UsersPage from "./UsersPage";
 
 const RightProfile = () => {
+    const [darkMode, setDarkMode] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+        document.body.classList.toggle('dark-mode-variables');
+    };
+
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    }
+
     return (
-        <div class="right-section">
-            <div class="nav">
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">
+        <div className={`right-section ${darkMode ? 'dark-mode' : ''}`}>
+            <div className="nav">
+                <button id="menu-btn" onClick={toggleMenu}>
+                    <span className="material-icons-sharp">
                         menu
                     </span>
                 </button>
-                <div class="dark-mode">
-                    <span class="material-icons-sharp active">
-                        light_mode
-                    </span>
-                    <span class="material-icons-sharp">
-                        dark_mode
+                <div className="dark-mode" onClick={toggleDarkMode}>
+                    <span className="material-icons-sharp active">
+                        {darkMode ? 'dark_mode' : 'light_mode'}
                     </span>
                 </div>
 
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Reza</b></p>
+                        <p>Hey, <b>Nick</b></p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile-1.jpg"/>
+                        <img src="images/profile-icon.png"/>
                     </div>
                 </div>
 
             </div>
             <div class="user-profile">
                 <div class="logo">
-                    <img src="images/logo.png"/>
-                    <h2>AsmrProg</h2>
-                    <p>Fullstack Web Developer</p>
+                    <img src="images/profile-icon.png"/>
+                    <h2>Nicolas Ortega</h2>
+                    <p>Front-End Developer</p>
                 </div>
             </div>
 
-            {/* <div class="reminders">
+            <div class="reminders">
                 <div class="header">
                     <h2>Reminders</h2>
                     <span class="material-icons-sharp">
@@ -93,7 +102,7 @@ const RightProfile = () => {
                     </div>
                 </div>
 
-            </div> */}
+            </div>
             <UsersPage />
         </div>
     );

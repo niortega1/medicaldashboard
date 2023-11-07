@@ -28,11 +28,14 @@ const UsersContent = () => {
                 <div className="user-list">
                     {users.map(user => (
                         <div className="user" key={user.id}>
+                            {/* Display user image */}
+                            <div>
+                                <img src={user.profilePic} alt={user.name} />
+                            </div>
                             <div className="user-details">
                                 <h2>{user.name}</h2>
                                 <p>{user.isOnline ? 'Online' : `Last online: ${user.lastOnline}`}</p>
                             </div>
-                            {/* Add a button to remove this user */}
                             <button onClick={() => handleRemoveUser(user.id)}>Remove User</button>
                         </div>
                     ))}

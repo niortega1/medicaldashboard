@@ -42,24 +42,24 @@ const Sidebar = () => {
                     <h3>Patients</h3>
                     <span class="message-count">7</span>
                 </Link>
-                <Link to="/appointments" onClick={() => handleClick('/appointments')} className={activeTab === '/appointments' ? 'active' : ''}>
+                {/* <Link to="/appointments" onClick={() => handleClick('/appointments')} className={activeTab === '/appointments' ? 'active' : ''}>
                     <span class="material-icons-sharp">
                         calendar_today
                     </span>
                     <h3>Appointments</h3>
-                </Link>
+                </Link> */}
                 <Link to="/billing" onClick={() => handleClick('/billing')} className={activeTab === '/billing' ? 'active' : ''}>
                     <span class="material-icons-sharp">
                         payment
                     </span>
                     <h3>Billing</h3>
                 </Link>
-                <Link to="/settings">
+                {/* <Link to="/settings">
                     <span class="material-icons-sharp">
                         settings
                     </span>
                     <h3>Settings</h3>
-                </Link>
+                </Link> */}
                 <Link to="/">
                     <span class="material-icons-sharp">
                         logout

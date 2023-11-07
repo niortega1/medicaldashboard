@@ -31,6 +31,10 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+.recent-patients button {
+    cursor: pointer;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -138,8 +142,6 @@ b{
     transition: all 0.3s ease;
   }
   
-  .nav-list {
-}
   
   .nav-item {
     display: flex;
@@ -338,6 +340,14 @@ main .analyse .progresss .percentage{
     padding: 1.4rem;
 }
 
+.user img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
 
 .user button {
     color: rgb(180, 35, 24);
@@ -639,6 +649,81 @@ main .recent-orders a{
     display: flex;
     align-items: center;
     gap: 0.6rem;
+}
+
+/* AddPatientForm Styles */
+.add-patient-form, .add-user-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; /* Adjust width as necessary */
+    margin: auto;
+    margin-top: 30px;
+    padding: var(--padding-1);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+}
+
+.add-patient-form label,
+.add-user-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+.add-patient-form input, 
+.add-user-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--color-info-dark);
+    color: var(--color-dark);
+}
+
+.add-patient-form input[type="text"],
+.add-patient-form input[type="number"],
+.add-patient-form input[type="email"],
+.add-patient-form input[type="tel"],
+.add-patient-form input[type="date"] {
+    background-color: var(--color-background);
+}
+
+.add-patient-form input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-light);
+}
+
+.add-patient-form button {
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-2);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-patient-form button:hover,
+.add-user-form button:hover {
+    background-color: var(--color-dark-variant);
+}
+
+.add-patient-form button:disabled {
+    background-color: var(--color-dark-variant);
+    cursor: not-allowed;
+}
+
+.add-user-form button {
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-2);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 @media screen and (max-width: 1200px) {

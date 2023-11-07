@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { addPatient, removePatient } from '../slices/patientsSlice';
 import AddPatientForm from '../components/AddPatientForm';
+import BillingPage from '../containers/BillingPage';
 
 const PatientsContent = () => {
     const dispatch = useDispatch();
@@ -59,14 +60,14 @@ const PatientsContent = () => {
                             ))}
                         </tbody>
                     </table>
-                    <a href="#">Show All</a>
                 </div>      
+                </Link>
                 {!showAddPatientForm ? (
                     <button onClick={handleAddPatientClick}>Add Patient</button>
                 ) : (
                     <AddPatientForm onFormSubmit={handleFormSubmit} />
                 )}
-            </Link>
+            <BillingPage />
         </div>
       );
       };

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 const AddPatientForm = ({ onFormSubmit }) => {
     const [name, setName] = useState('');
-    const [age, setAge] = useState(null);
+    const [age, setAge] = useState('');
     const [condition, setCondition] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
-    const [lastVisit, setLastVisit] = useState(null);
+    const [lastVisit, setLastVisit] = useState('');
 
     const handleNameChange = (event) => {
         setName(event.target.value);
@@ -43,11 +43,12 @@ const AddPatientForm = ({ onFormSubmit }) => {
             phone,
             lastVisit: new Date().toLocaleDateString()
         };
+        console.log('New Patient: ', newPatient);
         onFormSubmit(newPatient);
     };
 
     return (
-        <div>
+        <div className='add-patient-form' >
             <form onSubmit={handleSubmit} >
                 <label>
                     Patient Name:

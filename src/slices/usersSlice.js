@@ -2,14 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     users: [
-        { id: 1, name: 'Zach Stilwell', isOnline: true, lastOnline: 'Online' },
-        { id: 2, name: 'Joey Bastion', isOnline: false, lastOnline: '14 minutes ago' },
-        { id: 3, name: 'Delaney Long', isOnline: false, lastOnline: '1 Day ago' },
-        { id: 4, name: 'Grant Popov', isOnline: true, lastOnline: 'Online' },
-        { id: 5, name: 'Danielle Thatcher', isOnline: true, lastOnline: 'Online' },
-        { id: 6, name: 'Abbi Smith', isOnline: false, lastOnline: '34 minutes' },
-        { id: 7, name: 'Mason Lorn', isOnline: true, lastOnline: 'Online' },
-        { id: 8, name: 'Spencer Mckinney', isOnline: false, lastOnline: '12 hours ago' },
+        { id: 1, name: 'Zach Stilwell', isOnline: true, lastOnline: 'Online', profilePic: 'images/stilwell.avif' },
+        { id: 2, name: 'Joey Bastion', isOnline: false, lastOnline: '14 minutes ago', profilePic: 'images/joey.avif' },
+        { id: 3, name: 'Delaney Long', isOnline: false, lastOnline: '1 Day ago', profilePic: 'images/delaney.avif' },
     ],
     status: null,
 };
