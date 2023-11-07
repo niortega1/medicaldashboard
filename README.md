@@ -27,6 +27,11 @@ Adding new patient records
 Tracking patient appointment histories
 Managing billing and payment statuses
 
+
+![image](https://github.com/niortega1/medicaldashboard/assets/82734892/2e1c2bfd-bc90-404a-baab-52fd0737aee2)
+![image](https://github.com/niortega1/medicaldashboard/assets/82734892/4f3fecdf-b94e-4a13-b993-02d893adf8f4)
+
+
 ## Contributing
 If you'd like to contribute, please fork the repository and create a pull request, or you can open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
