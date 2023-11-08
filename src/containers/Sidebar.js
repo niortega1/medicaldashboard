@@ -5,6 +5,12 @@ const Sidebar = () => {
     const location = useLocation();
     const [activeTab, setActiveTab] = useState(location.pathname);
 
+    const sideMenu = document.querySelector('aside');
+    
+    const closeMenu = () => {
+        sideMenu.style.display = 'none';
+    }
+
     const handleClick = (name) => {
         setActiveTab(name);
     }
@@ -12,14 +18,16 @@ const Sidebar = () => {
     return (
         <div className="container">
             <aside >
-                <div class="toggle">
+                <div className="toggle">
                     <div class="logo">
                         <h2>Medical Dashboard</h2>
                     </div>
-                    <div class="close" id="close-btn">
+                    <div >
+                        <button className="close" id="close-btn" onClick={closeMenu} >
                         <span class="material-icons-sharp">
                             close
                         </span>
+                        </button>
                     </div>
                 </div>
                 <div class="sidebar">

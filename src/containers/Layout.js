@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <div className='container'>
       <Sidebar />
       <main className="main-content">
-        {children} // This is where the content of each page will go
+        {children} 
       </main>
       <RightProfile />
     </div>

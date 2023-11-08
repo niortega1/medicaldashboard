@@ -3,7 +3,11 @@ import UsersPage from "./UsersPage";
 
 const RightProfile = () => {
     const [darkMode, setDarkMode] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
+    const [menu, setMenu] = useState(false);
+
+    const sideMenu = document.querySelector('aside');
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
@@ -11,13 +15,16 @@ const RightProfile = () => {
     };
 
     const toggleMenu = () => {
-        setShowMenu(!showMenu);
-    }
+        setMenu(!menu);
+        sideMenu.style.display = 'block';
+        }
+        
+
 
     return (
         <div className={`right-section ${darkMode ? 'dark-mode' : ''}`}>
             <div className="nav">
-                <button id="menu-btn" onClick={toggleMenu}>
+                <button id="menu-btn" onClick={toggleMenu}  >
                     <span className="material-icons-sharp">
                         menu
                     </span>
